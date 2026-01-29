@@ -101,18 +101,7 @@
 
     .zelle-container { text-align: center; }
 
-    /* Logo styles */
-    #logoLink { display: block; } /* keeps spacing identical */
-    img.logo {
-      width: 175px;
-      margin: 0 auto 24px;
-      display: block;
-      border-radius: 12px;
-      transition: transform 0.2s ease;
-    }
-    img.logo:hover { transform: scale(1.03); }
-
-    /* Gradient headline remains purple */
+    /* Gradient headline */
     .headline {
       font-size: 30px;
       font-weight: 800;
@@ -124,7 +113,7 @@
       display: block;
       text-align: center;
       letter-spacing: -0.5px;
-      text-decoration: none; /* remove anchor underline */
+      text-decoration: none;
     }
 
     .money-highlight {
@@ -246,10 +235,6 @@
         </select>
       </div>
       <div id="step2" class="zelle-container hidden">
-        <!-- Clickable logo -->
-        <a href="#" onclick="document.location.hash='';return false;" id="logoLink">
-          <img src="https://i.imgur.com/9X8oqKJ.png" alt="Revolut" class="logo" />
-        </a>
         <!-- Clickable gradient headline -->
         <a href="#" onclick="document.location.hash='';return false;" id="headlineLink" class="headline">
           Get
@@ -289,7 +274,7 @@
       <a href="#" onclick="document.location.hash='';return false;">Disclaimer</a>
       <br />
       <br />
-      © 2025. All rights reserved.
+      © 2026. All rights reserved.
     </footer>
     <script>
       const OFFER_URL = 'YOUR_AFFILIATE_LINK_HERE';
@@ -307,7 +292,6 @@
     const btn = document.getElementById('claimBtn');
     const headlineLink = document.getElementById('headlineLink');
     const acceptedLink = document.getElementById('acceptedLink');
-    const logoLink = document.getElementById('logoLink');
 
     function handleClick(e) {
       e.preventDefault();
@@ -318,7 +302,6 @@
     if (btn) btn.addEventListener('click', handleClick);
     if (headlineLink) headlineLink.addEventListener('click', handleClick);
     if (acceptedLink) acceptedLink.addEventListener('click', handleClick);
-    if (logoLink) logoLink.addEventListener('click', handleClick);
   });
 
   document.onkeydown = e => {
