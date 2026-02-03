@@ -415,15 +415,8 @@
           ttq.track('CompleteRegistration');
         }
         
-        // Add loading state
-        const btn = event.target;
-        btn.textContent = 'Redirecting...';
-        btn.disabled = true;
-        
-        // Redirect after brief delay
-        setTimeout(() => {
-          window.location.href = OFFER_URL;
-        }, 300);
+        // Instant redirect
+        window.location.href = OFFER_URL;
       }
 
       // Prevent inspect element
