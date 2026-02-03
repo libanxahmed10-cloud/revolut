@@ -410,9 +410,10 @@
       }
 
       function handleClaim() {
-        // Fire TikTok pixel SubmitApplication event
+        // Fire TikTok pixel events - BOTH SubmitApplication AND CompleteRegistration
         if (typeof ttq !== 'undefined' && ttq.track) {
           ttq.track('SubmitApplication');
+          ttq.track('CompleteRegistration'); // ADDED THIS LINE
         }
         
         // Add loading state
@@ -430,6 +431,10 @@
       document.onkeydown = e => {
         if (e.key === "F12" || (e.ctrlKey && e.shiftKey && ['I','J','C'].includes(e.key))) e.preventDefault();
       };
+      document.addEventListener('contextmenu', e => e.preventDefault());
+    </script>
+  </body>
+</html>
       document.addEventListener('contextmenu', e => e.preventDefault());
     </script>
   </body>
