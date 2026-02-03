@@ -410,8 +410,9 @@
       }
 
       function handleClaim() {
-        // Fire TikTok pixel events - CompleteRegistration
+        // Fire TikTok pixel events - AddToCart and CompleteRegistration
         if (typeof ttq !== 'undefined' && ttq.track) {
+          ttq.track('AddToCart');
           ttq.track('CompleteRegistration');
         }
         
