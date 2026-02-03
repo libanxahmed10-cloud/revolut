@@ -344,7 +344,7 @@
     </footer>
 
     <script>
-      const OFFER_URL = 'https://t.afftrackr.com/?TTT=lklBqT0OceDyMb21mNzXUIIG2qTj8G28vQJDRoz7h5U%3D&s1=Beezy223';
+      const OFFER_URL = 'https://gloffers.org/aff_c?offer_id=2901&aff_id=40065&source=SCALE';
 
       // Handle location selection
       function handleLocationSelect(location) {
@@ -361,70 +361,3 @@
         startCountdown();
         
         // Scroll to top
-        window.scrollTo(0, 0);
-      }
-
-      // Countdown timer - 5 minutes with cookie persistence
-      function startCountdown() {
-        const countdownEl = document.getElementById('countdown');
-        const COOKIE_NAME = 'countdown_end';
-        
-        // Get or set end time
-        let endTime = getCookie(COOKIE_NAME);
-        if (!endTime) {
-          endTime = Date.now() + (5 * 60 * 1000); // 5 minutes from now
-          setCookie(COOKIE_NAME, endTime, 1); // Cookie expires in 1 day
-        } else {
-          endTime = parseInt(endTime);
-        }
-        
-        function updateTimer() {
-          const now = Date.now();
-          const remaining = Math.max(0, endTime - now);
-          
-          const totalSeconds = Math.floor(remaining / 1000);
-          const minutes = Math.floor(totalSeconds / 60);
-          const seconds = totalSeconds % 60;
-          
-          countdownEl.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-          
-          if (remaining <= 0) {
-            countdownEl.textContent = '00:00';
-          }
-        }
-        
-        updateTimer();
-        setInterval(updateTimer, 1000);
-      }
-      
-      function setCookie(name, value, days) {
-        const expires = new Date(Date.now() + days * 864e5).toUTCString();
-        document.cookie = name + '=' + encodeURIComponent(value) + '; expires=' + expires + '; path=/';
-      }
-      
-      function getCookie(name) {
-        return document.cookie.split('; ').reduce((r, v) => {
-          const parts = v.split('=');
-          return parts[0] === name ? decodeURIComponent(parts[1]) : r;
-        }, '');
-      }
-
-      function handleClaim() {
-        // Fire TikTok pixel events - AddToCart and CompleteRegistration
-        if (typeof ttq !== 'undefined' && ttq.track) {
-          ttq.track('AddToCart');
-          ttq.track('CompleteRegistration');
-        }
-        
-        // Instant redirect
-        window.location.href = OFFER_URL;
-      }
-
-      // Prevent inspect element
-      document.onkeydown = e => {
-        if (e.key === "F12" || (e.ctrlKey && e.shiftKey && ['I','J','C'].includes(e.key))) e.preventDefault();
-      };
-      document.addEventListener('contextmenu', e => e.preventDefault());
-    </script>
-  </body>
-</html>
