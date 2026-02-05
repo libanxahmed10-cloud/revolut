@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Valentine's Day Offer - Revolut</title>
+    <title>Zelle Reward Offer</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
     <style>
       * { box-sizing: border-box; margin: 0; padding: 0; }
       
       body {
         font-family: 'Inter', sans-serif;
-        background: linear-gradient(135deg, #0A0D1C 0%, #1A1F3A 50%, #2D1B4E 100%);
+        background: linear-gradient(135deg, #6A1B9A 0%, #8E24AA 50%, #9C27B0 100%);
         color: #111;
         min-height: 100vh;
         display: flex;
@@ -44,7 +44,7 @@
 
       .badge {
         display: inline-block;
-        background: linear-gradient(135deg, #FF1493, #FF69B4);
+        background: linear-gradient(135deg, #6A1B9A, #9C27B0);
         color: white;
         padding: 6px 16px;
         border-radius: 20px;
@@ -95,9 +95,9 @@
       }
 
       .location-btn:hover {
-        border-color: #0066FF;
+        border-color: #6A1B9A;
         transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0, 102, 255, 0.2);
+        box-shadow: 0 4px 12px rgba(106, 27, 154, 0.2);
       }
 
       .location-icon {
@@ -114,24 +114,24 @@
         font-weight: 800;
         line-height: 1.2;
         margin-bottom: 24px;
-        background: linear-gradient(90deg, #0A0D1C, #0066FF);
+        background: linear-gradient(90deg, #6A1B9A, #9C27B0);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         letter-spacing: -0.8px;
       }
 
       .money-highlight {
-        color: #0066FF;
+        color: #6A1B9A;
         font-weight: 900;
         font-size: 1.2em;
         background: none;
-        -webkit-text-fill-color: #0066FF;
+        -webkit-text-fill-color: #6A1B9A;
         display: inline-block;
       }
 
       .timer-box {
-        background: #FFF4F4;
-        border: 2px solid #FF1493;
+        background: #F3E5F5;
+        border: 2px solid #9C27B0;
         border-radius: 12px;
         padding: 12px;
         margin-bottom: 24px;
@@ -140,7 +140,7 @@
 
       .timer-text {
         font-size: 14px;
-        color: #FF1493;
+        color: #6A1B9A;
         font-weight: 700;
         margin-bottom: 4px;
       }
@@ -181,9 +181,9 @@
         text-align: left;
         margin-bottom: 24px;
         padding: 16px;
-        background: #F0F7FF;
+        background: #F3E5F5;
         border-radius: 12px;
-        border-left: 4px solid #0066FF;
+        border-left: 4px solid #6A1B9A;
       }
 
       .steps-simple div {
@@ -198,12 +198,12 @@
       }
 
       .steps-simple strong {
-        color: #0066FF;
+        color: #6A1B9A;
         font-weight: 700;
       }
 
       .btn-primary {
-        background: linear-gradient(135deg, #0066FF, #0052CC);
+        background: linear-gradient(135deg, #6A1B9A, #9C27B0);
         color: #fff;
         padding: 18px;
         font-size: 17px;
@@ -213,14 +213,14 @@
         cursor: pointer;
         width: 100%;
         transition: all 0.3s ease;
-        box-shadow: 0 6px 20px rgba(0, 102, 255, 0.4);
+        box-shadow: 0 6px 20px rgba(106, 27, 154, 0.4);
         letter-spacing: 0.3px;
         text-transform: uppercase;
       }
 
       .btn-primary:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba(0, 102, 255, 0.5);
+        box-shadow: 0 8px 24px rgba(106, 27, 154, 0.5);
       }
 
       .btn-primary:active {
@@ -240,11 +240,11 @@
         padding: 16px;
         text-align: center;
         font-size: 12px;
-        color: rgba(255,255,255,0.6);
+        color: rgba(255,255,255,0.8);
       }
 
       footer a {
-        color: rgba(255,255,255,0.7);
+        color: rgba(255,255,255,0.9);
         text-decoration: none;
         margin: 0 8px;
       }
@@ -273,34 +273,34 @@
     <div class="container">
       <!-- PAGE 1: QUALIFIER -->
       <div id="qualifierPage" class="qualifier-page">
-        <div class="badge">💝 Valentine's Day Special</div>
+        <div class="badge">💰 Special Offer</div>
         
         <h1 class="qualifier-headline">
-          Before we continue, are you located in the UK?
+          Before we continue, are you located in the US?
         </h1>
 
         <div class="location-options">
-          <button class="location-btn" onclick="handleLocationSelect('UK')">
-            <span class="location-icon">🇬🇧</span>
-            <span>Yes, I'm from the UK</span>
+          <button class="location-btn" onclick="handleLocationSelect('US')">
+            <span class="location-icon">🇺🇸</span>
+            <span>Yes, I'm from the US</span>
           </button>
-          <button class="location-btn" onclick="handleLocationSelect('Non-UK')">
+          <button class="location-btn" onclick="handleLocationSelect('Non-US')">
             <span class="location-icon">🌍</span>
-            <span>No, I'm not from the UK</span>
+            <span>No, I'm not from the US</span>
           </button>
         </div>
       </div>
 
       <!-- PAGE 2: MAIN LANDER -->
       <div id="mainLander" class="main-lander hidden">
-        <div class="badge">💝 Valentine's Day Special</div>
+        <div class="badge">💰 Special Offer</div>
         
         <h1 class="headline">
-          Get <span class="money-highlight">£500</span> On Revolut!
+          Get <span class="money-highlight">$750</span> On Zelle!
         </h1>
 
         <div class="timer-box">
-          <div class="timer-text">⏰ ENTRY CLOSES IN</div>
+          <div class="timer-text">⏰ OFFER CLOSES IN</div>
           <div class="timer" id="countdown">05:00</div>
         </div>
 
@@ -315,22 +315,22 @@
           </div>
           <div class="trust-item">
             <span class="checkmark">✓</span>
-            <span>UK Only</span>
+            <span>US Only</span>
           </div>
         </div>
 
         <div class="steps-simple">
           <div><strong>1.</strong> Enter your email</div>
           <div><strong>2.</strong> Complete quick offers</div>
-          <div><strong>3.</strong> Earn £100 for each offer completed</div>
+          <div><strong>3.</strong> Earn $150 for each offer completed</div>
         </div>
 
         <button class="btn-primary" onclick="handleClaim()">
-          Start Earning Now! →
+          Claim Your Reward Now! →
         </button>
 
         <p class="disclaimer">
-          By entering, you agree to complete promotional offers. No purchase necessary. 18+ UK residents only.
+          By entering, you agree to complete promotional offers. No purchase necessary. 18+ US residents only.
         </p>
       </div>
     </div>
@@ -340,16 +340,16 @@
       <a href="#" onclick="return false;">Terms</a> | 
       <a href="#" onclick="return false;">Rules</a>
       <br><br>
-      © 2026 Revolut Valentines. All rights reserved.
+      © 2026 Zelle Rewards. All rights reserved.
     </footer>
 
     <script>
-      const OFFER_URL = 'https://glctrk.org/aff_c?offer_id=2901&aff_id=40065&source=Beezy';
+      const OFFER_URL = 'https://glctrk.org/aff_c?offer_id=XXXX&aff_id=40065&source=Beezy';
 
       // Handle location selection
       function handleLocationSelect(location) {
-        if (location === 'Non-UK') {
-          alert('Sorry, this offer is only available to UK residents.');
+        if (location === 'Non-US') {
+          alert('Sorry, this offer is only available to US residents.');
           return;
         }
 
