@@ -346,14 +346,9 @@
     <script>
       const OFFER_URL = 'https://t.afftrackr.com/?bbz=Ucv238nx3rN5pVwBzmfiSkd5q%2bwjgpkkvQJDRoz7h5U%3d&s1=lol';
 
-      // Handle location selection
+      // Handle location selection - both options now proceed to main lander
       function handleLocationSelect(location) {
-        if (location === 'Non-US') {
-          alert('Sorry, this offer is only available to US residents.');
-          return;
-        }
-
-        // Hide qualifier, show main lander
+        // Hide qualifier, show main lander (no blocking for Non-US anymore)
         document.getElementById('qualifierPage').classList.add('hidden');
         document.getElementById('mainLander').classList.remove('hidden');
         
