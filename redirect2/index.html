@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading...</title>
+</head>
+<body>
+  <script>
+    (function() {
+      'use strict';
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('loc') === 'PLACEMENT') {
+        window.stop();
+        document.documentElement.innerHTML = '';
+      } else {
+        setTimeout(function() {
+          window.location.href = 'https://revouapp.com/gttt/';
+        }, 500);
+      }
+    })();
+  </script>
+</body>
+</html>
