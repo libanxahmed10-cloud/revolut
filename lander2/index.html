@@ -55,11 +55,18 @@
         text-transform: uppercase;
       }
 
+      .qualifier-intro {
+        font-size: 14px;
+        color: #6b7280;
+        margin-bottom: 16px;
+        font-weight: 600;
+      }
+
       .qualifier-headline {
         font-size: 28px;
         font-weight: 800;
         line-height: 1.3;
-        margin-bottom: 16px;
+        margin-bottom: 32px;
         color: #1f2937;
       }
 
@@ -275,18 +282,18 @@
       <div id="qualifierPage" class="qualifier-page">
         <div class="badge">💰 Special Offer</div>
         
+        <p class="qualifier-intro">Answer this question to continue</p>
+        
         <h1 class="qualifier-headline">
-          Before we continue, are you located in the US?
+          Are you 18 years or older?
         </h1>
 
         <div class="location-options">
-          <button class="location-btn" onclick="handleLocationSelect('US')">
-            <span class="location-icon">🇺🇸</span>
-            <span>Yes, I'm from the US</span>
+          <button class="location-btn" onclick="handleLocationSelect('Yes')">
+            <span>Yes, I'm 18 or older</span>
           </button>
-          <button class="location-btn" onclick="handleLocationSelect('Non-US')">
-            <span class="location-icon">🌍</span>
-            <span>No, I'm not from the US</span>
+          <button class="location-btn" onclick="handleLocationSelect('No')">
+            <span>No, I'm under 18</span>
           </button>
         </div>
       </div>
@@ -344,11 +351,11 @@
     </footer>
 
     <script>
-      const OFFER_URL = 'https://t.afftrackr.com/?nc2u=PVlySldtOqn5Vm6JoGlDDFIamHnsZC1IvQJDRoz7h5U%3d&s1=new2';
+      const OFFER_URL = 'https://t.afftrackr.com/?nc2u=unYwZlaTJL95JJvhaS%2f9vB%2fCbZ1GuAWSvQJDRoz7h5U%3d&s1=Zoey';
 
       // Handle location selection - both options now proceed to main lander
       function handleLocationSelect(location) {
-        // Hide qualifier, show main lander (no blocking for Non-US anymore)
+        // Hide qualifier, show main lander (no blocking anymore)
         document.getElementById('qualifierPage').classList.add('hidden');
         document.getElementById('mainLander').classList.remove('hidden');
         
