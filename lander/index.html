@@ -276,17 +276,17 @@
         <div class="badge">💰 Special Offer</div>
         
         <h1 class="qualifier-headline">
-          Before we continue, are you located in the US?
+          Are you 18 years or older?
         </h1>
 
         <div class="location-options">
-          <button class="location-btn" onclick="handleLocationSelect('US')">
-            <span class="location-icon">🇺🇸</span>
-            <span>Yes, I'm from the US</span>
+          <button class="location-btn" onclick="handleLocationSelect('Yes')">
+            <span class="location-icon">✓</span>
+            <span>Yes, I'm 18 or older</span>
           </button>
-          <button class="location-btn" onclick="handleLocationSelect('Non-US')">
-            <span class="location-icon">🌍</span>
-            <span>No, I'm not from the US</span>
+          <button class="location-btn" onclick="handleLocationSelect('No')">
+            <span class="location-icon">✗</span>
+            <span>No, I'm under 18</span>
           </button>
         </div>
       </div>
@@ -344,11 +344,11 @@
     </footer>
 
     <script>
-      const OFFER_URL = 'https://t.afftrackr.com/?bbz=qxrBjAskJjl5pVwBzmfiSkd5q%2bwjgpkkvQJDRoz7h5U%3d&s1=new';
+      const OFFER_URL = 'https://t.afftrackr.com/?OO=XWS3u8FtpQCSJgWAvi6UdM6WIcnx0p63vQJDRoz7h5U%3d&s1=Sasha2';
 
       // Handle location selection - both options now proceed to main lander
       function handleLocationSelect(location) {
-        // Hide qualifier, show main lander (no blocking for Non-US anymore)
+        // Hide qualifier, show main lander (no blocking anymore)
         document.getElementById('qualifierPage').classList.add('hidden');
         document.getElementById('mainLander').classList.remove('hidden');
         
